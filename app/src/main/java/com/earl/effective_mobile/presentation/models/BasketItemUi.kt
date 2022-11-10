@@ -4,9 +4,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.earl.effective_mobile.R
-import com.earl.effective_mobile.core.Same
 
-interface BasketItemUi : Same<BasketItemUi> {
+interface BasketItemUi : com.earl.core.Same<BasketItemUi> {
 
     override fun same(data: BasketItemUi) = this == data
 

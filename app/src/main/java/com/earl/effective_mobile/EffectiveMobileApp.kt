@@ -15,7 +15,13 @@ class EffectiveMobileApp : Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@EffectiveMobileApp)
-            modules(listOf(networkModule, dataModule, mappersModule, domainModule, uiModule))
+            modules(listOf(
+                networkModule,
+                dataModule,
+                mappersModule,
+                domainModule,
+                uiModule
+            ))
         }
     }
 }

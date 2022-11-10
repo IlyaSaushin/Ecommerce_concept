@@ -1,7 +1,5 @@
 package com.earl.effective_mobile.presentation.models
 
-import com.earl.effective_mobile.core.ErrorType
-
 sealed class HomeStoreListPresentation {
 
     abstract fun list() : List<HomeStorePresentation>
@@ -10,7 +8,7 @@ sealed class HomeStoreListPresentation {
         override fun list() = list
     }
 
-    data class Fail(private val ex: ErrorType) : HomeStoreListPresentation() {
+    data class Fail(private val ex: com.earl.core.ErrorType) : HomeStoreListPresentation() {
         override fun list() = emptyList<HomeStorePresentation>()
     }
 }

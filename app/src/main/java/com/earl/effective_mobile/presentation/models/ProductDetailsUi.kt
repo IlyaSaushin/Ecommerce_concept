@@ -5,10 +5,8 @@ import android.widget.RatingBar
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.earl.effective_mobile.R
-import com.earl.effective_mobile.core.DisplayableItem
-import com.earl.effective_mobile.core.Same
 
-interface ProductDetailsUi : Same<ProductDetailsUi>, DisplayableItem {
+interface ProductDetailsUi : com.earl.core.Same<ProductDetailsUi>, com.earl.core.DisplayableItem {
 
     override fun same(data: ProductDetailsUi) = this == data
 

@@ -1,11 +1,13 @@
 package com.earl.effective_mobile.presentation.screens.main
 
-import android.util.Log
 import androidx.lifecycle.*
-import com.earl.effective_mobile.domain.Interactor
-import com.earl.effective_mobile.domain.mappers.BestSellerListDomainToPresentationMapper
-import com.earl.effective_mobile.domain.mappers.HomeStoreListDomainToPresentationMapper
+import com.earl.domain.mappers.BestSellerListDomainToPresentationMapper
+import com.earl.domain.mappers.HomeStoreListDomainToPresentationMapper
+import com.earl.domain.models.BestSellerListDomain
+import com.earl.domain.models.HomeStoreListDomain
+import com.earl.effective_mobile.presentation.models.BestSellerListPresentation
 import com.earl.effective_mobile.presentation.models.BestSellerPresentation
+import com.earl.effective_mobile.presentation.models.HomeStoreListPresentation
 import com.earl.effective_mobile.presentation.models.HomeStorePresentation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,7 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainFragmentViewModel(
-    private val interactor: Interactor,
+    private val interactor: com.earl.domain.Interactor,
     private val homeStoreListDomainToPresentationMapper: HomeStoreListDomainToPresentationMapper,
     private val bestSellerListDomainToPresentationMapper: BestSellerListDomainToPresentationMapper
 ) : ViewModel() {
@@ -27,7 +29,9 @@ class MainFragmentViewModel(
 
     fun fetchHomeStoreList() {
         viewModelScope.launch(Dispatchers.IO) {
-            val list = interactor.fetchHomeStoreList().map(homeStoreListDomainToPresentationMapper).list()
+            val list = interactor.fetchHomeStoreList<HomeStoreListDomain>()
+                .map<HomeStoreListPresentation>(homeStoreListDomainToPresentationMapper)
+                .list()
             withContext(Dispatchers.Main) {
                 homeStoreListLiveData.value = list
             }
@@ -36,7 +40,9 @@ class MainFragmentViewModel(
 
     fun fetchBestSellerList() {
         viewModelScope.launch(Dispatchers.IO) {
-            val list = interactor.fetchBestSellerList().map(bestSellerListDomainToPresentationMapper).list()
+            val list = interactor.fetchBestSellerList<BestSellerListDomain>()
+                .map<BestSellerListPresentation>(bestSellerListDomainToPresentationMapper)
+                .list()
             withContext(Dispatchers.Main) {
                 bestSellerListLivedata.value = list
             }
@@ -45,7 +51,7 @@ class MainFragmentViewModel(
 
     fun fetchBasketItemsListSize() {
         viewModelScope.launch(Dispatchers.IO) {
-            val size = interactor.fetchBasketItemsListSize()
+            val size = interactor.fetchBasketItemsListSize<Int>()
             withContext(Dispatchers.Main) {
                 if (size >= 1) {
                     basketItemsListSizeFlow.value = size

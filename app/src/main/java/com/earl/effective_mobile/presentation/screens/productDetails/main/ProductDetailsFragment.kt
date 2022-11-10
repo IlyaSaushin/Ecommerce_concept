@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.earl.effective_mobile.R
-import com.earl.effective_mobile.core.BaseFragment
 import com.earl.effective_mobile.databinding.FragmentProductDetailsBinding
+import com.earl.effective_mobile.presentation.BaseFragment
 import com.earl.effective_mobile.presentation.models.ProductDetailsUi
 import com.earl.effective_mobile.presentation.screens.productDetails.main.recyclerAdapters.CenterDecoration
 import com.earl.effective_mobile.presentation.screens.productDetails.main.recyclerAdapters.CenterSnapHelper

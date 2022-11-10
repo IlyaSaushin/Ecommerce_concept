@@ -1,9 +1,10 @@
 package com.earl.effective_mobile.presentation.mappers
 
-import com.earl.effective_mobile.domain.mappers.BestSellerDomainToPresentationMapper
+import com.earl.domain.mappers.BestSellerDomainToPresentationMapper
 import com.earl.effective_mobile.presentation.models.BestSellerPresentation
 
-class BaseBestSellerDomainToPresentationMapper : BestSellerDomainToPresentationMapper<BestSellerPresentation> {
+class BaseBestSellerDomainToPresentationMapper :
+    BestSellerDomainToPresentationMapper<BestSellerPresentation> {
 
     override fun map(
         id: Int,

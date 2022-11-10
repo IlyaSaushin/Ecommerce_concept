@@ -1,6 +1,6 @@
 package com.earl.effective_mobile.di
 
-import com.earl.effective_mobile.data.retrofit.Service
+import com.earl.data.retrofit.Service
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

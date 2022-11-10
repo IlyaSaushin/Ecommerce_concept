@@ -1,6 +1,6 @@
 package com.earl.effective_mobile.presentation.mappers
 
-import com.earl.effective_mobile.domain.mappers.ProductDetailsDomainToUiMapper
+import com.earl.domain.mappers.ProductDetailsDomainToUiMapper
 import com.earl.effective_mobile.presentation.models.ProductDetailsUi
 
 class BaseProductDetailsDomainToUiMapper : ProductDetailsDomainToUiMapper<ProductDetailsUi> {

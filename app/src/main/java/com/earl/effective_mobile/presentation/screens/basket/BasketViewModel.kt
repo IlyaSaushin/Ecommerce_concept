@@ -1,13 +1,9 @@
 package com.earl.effective_mobile.presentation.screens.basket
 
 import android.util.Log
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.earl.effective_mobile.domain.Interactor
-import com.earl.effective_mobile.domain.mappers.BasketDomainToUiMapper
+import androidx.lifecycle.*
+import com.earl.domain.mappers.BasketDomainToUiMapper
+import com.earl.domain.models.BasketDomain
 import com.earl.effective_mobile.presentation.models.BasketItemUi
 import com.earl.effective_mobile.presentation.models.BasketUi
 import kotlinx.coroutines.Dispatchers
@@ -15,7 +11,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class BasketViewModel(
-    private val interactor: Interactor,
+    private val interactor: com.earl.domain.Interactor,
     private val basketDomainToUiMapper: BasketDomainToUiMapper<BasketUi>
 ) : ViewModel() {
 
@@ -24,7 +20,7 @@ class BasketViewModel(
 
     fun fetchBasket() {
         viewModelScope.launch(Dispatchers.IO) {
-            val basket = interactor.fetchBasket().map(basketDomainToUiMapper)
+            val basket = interactor.fetchBasket<BasketDomain>().map(basketDomainToUiMapper)
             withContext(Dispatchers.Main) {
                 basketItemsLiveData.value = basket.baskets()
                 basketLiveData.value = basket

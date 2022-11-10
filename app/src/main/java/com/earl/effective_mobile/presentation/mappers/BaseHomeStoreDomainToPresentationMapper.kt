@@ -1,9 +1,10 @@
 package com.earl.effective_mobile.presentation.mappers
 
-import com.earl.effective_mobile.domain.mappers.HomeStoreDomainToPresentationMapper
+import com.earl.domain.mappers.HomeStoreDomainToPresentationMapper
 import com.earl.effective_mobile.presentation.models.HomeStorePresentation
 
-class BaseHomeStoreDomainToPresentationMapper : HomeStoreDomainToPresentationMapper<HomeStorePresentation> {
+class BaseHomeStoreDomainToPresentationMapper :
+    HomeStoreDomainToPresentationMapper<HomeStorePresentation> {
 
     override fun map(
         id: Int,

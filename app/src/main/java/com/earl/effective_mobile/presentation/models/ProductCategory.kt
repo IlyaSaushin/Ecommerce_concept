@@ -2,9 +2,8 @@ package com.earl.effective_mobile.presentation.models
 
 import android.widget.ImageView
 import android.widget.TextView
-import com.earl.effective_mobile.core.Same
 
-interface ProductCategory : Same<ProductCategory> {
+interface ProductCategory : com.earl.core.Same<ProductCategory> {
 
     override fun same(data: ProductCategory) = this == data
 

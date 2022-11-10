@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.earl.effective_mobile.R
-import com.earl.effective_mobile.core.BaseFragment
 import com.earl.effective_mobile.databinding.FragmentMainBinding
+import com.earl.effective_mobile.presentation.BaseFragment
 import com.earl.effective_mobile.presentation.models.BestSellerPresentation
 import com.earl.effective_mobile.presentation.models.ProductCategory
 import com.earl.effective_mobile.presentation.screens.main.recyclerAdapters.*

@@ -9,9 +9,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.earl.effective_mobile.core.Same
 
-interface HomeStorePresentation : Same<HomeStorePresentation> {
+interface HomeStorePresentation : com.earl.core.Same<HomeStorePresentation> {
 
     override fun same(data: HomeStorePresentation) = data == this
 

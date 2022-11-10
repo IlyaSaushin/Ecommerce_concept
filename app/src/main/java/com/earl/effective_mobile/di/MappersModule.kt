@@ -1,9 +1,9 @@
 package com.earl.effective_mobile.di
 
-import com.earl.effective_mobile.data.mappers.*
-import com.earl.effective_mobile.data.models.*
-import com.earl.effective_mobile.domain.mappers.*
-import com.earl.effective_mobile.domain.models.*
+import com.earl.data.mappers.*
+import com.earl.data.models.*
+import com.earl.domain.mappers.*
+import com.earl.domain.models.*
 import com.earl.effective_mobile.presentation.mappers.*
 import com.earl.effective_mobile.presentation.models.*
 import org.koin.dsl.module
@@ -85,4 +85,4 @@ val mappersModule = module {
     single<BasketDataToDomainMapper<BasketDomain>> {
         BaseBasketDataToDomainMapper(itemMapper = get())
     }
- }
+}

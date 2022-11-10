@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.view.isVisible
-import com.earl.effective_mobile.core.BaseFragment
 import com.earl.effective_mobile.databinding.FragmentShopDetailsBinding
+import com.earl.effective_mobile.presentation.BaseFragment
 import com.earl.effective_mobile.presentation.models.ProductDetailsUi
 import com.earl.effective_mobile.presentation.screens.productDetails.shop.adapters.OnColorDetailsClickListener
 import com.earl.effective_mobile.presentation.screens.productDetails.shop.adapters.OnMemoryClickListener

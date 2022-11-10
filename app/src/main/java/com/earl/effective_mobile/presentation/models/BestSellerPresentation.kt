@@ -5,9 +5,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.earl.effective_mobile.R
-import com.earl.effective_mobile.core.Same
 
-interface BestSellerPresentation : Same<BestSellerPresentation> {
+interface BestSellerPresentation : com.earl.core.Same<BestSellerPresentation> {
 
     override fun same(data: BestSellerPresentation) = data == this
 
