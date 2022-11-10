@@ -115,6 +115,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="30dp"
             style="@style/MyCustomTabLayout"
+            android:background="@color/white"
             app:tabMode="fixed"
             />
 
