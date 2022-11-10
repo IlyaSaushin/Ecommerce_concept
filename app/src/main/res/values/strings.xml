@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Effective_Mobile</string>
+    <string name="location">Zihuatanejo, Gro</string>
+    <string name="select_category">Select Category</string>
+    <string name="view_all">view all</string>
+    <string name="phones">Phones</string>
+    <string name="search">Search</string>
+    <string name="iphone_12">Iphone 12</string>
+    <string name="super_fast_cool">Super Fast Cool</string>
+    <string name="buy_now">Buy now!</string>
+    <string name="see_more">see more</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="_1_047">$1,047</string>
+    <string name="_1_500"><strike>$1,500</strike></string>
+    <string name="samsung_galaxy_s20_ultra">Samsung Galaxy S20 Ultra</string>
+    <string name="explorer">Explorer</string>
+    <string name="filter_options">Filter options</string>
+    <string name="done">Done</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price</string>
+    <string name="size">Size</string>
+    <string name="product_details">Product Details</string>
+    <string name="galaxy_note_20_ultra">Galaxy Note 20 Ultra</string>
+    <string name="exynos_990">Exynos 990</string>
+    <string name="_108_12_mp">108 + 12 mp</string>
+    <string name="_8_gb">8 GB</string>
+    <string name="_256_gb">256 GB</string>
+    <string name="select_color_and_capacity">Select color and capacity</string>
+    <string name="_126_gb">126 GB</string>
+    <string name="add_to_cart">$%s0</string>
+    <string name="add_address">Add address</string>
+    <string name="my_cart">My Cart</string>
+    <string name="galaxy_note_20_ultraa">Galaxy Note 20 Ultra</string>
+    <string name="_3000_00">$3000.00</string>
+    <string name="total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="_6_000_us">$6,000 us</string>
+    <string name="free">Free</string>
+    <string name="checkout">Checkout</string>
+    <string name="shop">Shop</string>
+    <string name="details">Details</string>
+    <string name="features">Features</string>
+    <string name="phoness">Phones</string>
+    <string name="comp">Computer</string>
+    <string name="health">Health</string>
+    <string name="boks">Books</string>
+    <string name="anoterbooks">More books</string>
+    <string name="_3">3</string>
+    <string name="discount_price">$%s</string>
+    <string name="priceBefore"><strike>$%s</strike></string>
+    <string name="totalprice">$%s us</string>
+    <string name="add_to_cartT">Add to Cart</string>
+    <string name="ecommerce_concept">Ecommerce Concept</string>
+    <string-array name="brands_spinner">
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+        <item>huawei</item>
+        <item>Apple</item>
+    </string-array>
+    <string-array name="price_spinner">
+        <item>$0 - $1000</item>
+        <item>$1000 - $3000</item>
+        <item>$3000 - $7000</item>
+        <item>$7000 - $10000</item>
+    </string-array>
+    <string-array name="size_spinner">
+        <item>4 to 4.5 inches</item>
+        <item>4.5 to 5.5 inches</item>
+        <item>5.5 to 5.7 inches</item>
+    </string-array>
+</resources>

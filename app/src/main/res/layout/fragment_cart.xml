@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/back_arrow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="37dp"
+        />
+
+    <TextView
+        android:id="@+id/add_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_address"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/markpro"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/back_arrow_btn"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow_btn"
+        app:layout_constraintEnd_toStartOf="@id/location_btn"
+        android:layout_marginEnd="10dp"
+        />
+    
+    <ImageView
+        android:id="@+id/location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location_btn"
+        app:layout_constraintTop_toTopOf="@id/back_arrow_btn"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        />
+
+    <TextView
+        android:id="@+id/my_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_cart"
+        android:fontFamily="@font/mark_pro_bold"
+        android:textSize="35dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/back_arrow_btn"
+        app:layout_constraintStart_toStartOf="@id/back_arrow_btn"
+        android:layout_marginTop="30dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/my_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/my_cart_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/stripe"
+            android:layout_marginTop="40dp"
+            tools:listitem="@layout/cart_recycler_item"
+            />
+
+        <View
+            android:id="@+id/stripe"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="200dp"
+            android:background="@color/customwhite"
+            />
+        
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textSize="18sp"
+            android:fontFamily="@font/markpro"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/stripe"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            />
+
+        <TextView
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delivery"
+            android:textSize="18sp"
+            android:fontFamily="@font/markpro"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/total"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            />
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_6_000_us"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/markpro"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/total"
+            app:layout_constraintBottom_toBottomOf="@id/total"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            />
+
+        <TextView
+            android:id="@+id/delivery_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/free"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/markpro"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/delivery"
+            app:layout_constraintBottom_toBottomOf="@id/delivery"
+            app:layout_constraintStart_toStartOf="@id/total_price"
+            />
+
+        <View
+            android:id="@+id/stripe_second"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/customwhite"
+            app:layout_constraintTop_toBottomOf="@id/delivery"
+            android:layout_marginTop="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/mark_pro_bold"
+            app:layout_constraintTop_toBottomOf="@id/stripe_second"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/done_btn_background"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="18dp"
+            />
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="70dp"
+    android:layout_height="30dp"
+    android:background="@drawable/prdct_recycler_item_backround">
+
+    <TextView
+        android:id="@+id/sdd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/_126_gb"
+        android:fontFamily="@font/markpro"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="@color/prod_dtls_color"
+        android:gravity="center"
+        />
+
+</FrameLayout>

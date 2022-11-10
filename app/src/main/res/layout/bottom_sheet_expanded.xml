@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="7dp"
+    android:background="@drawable/expanded_bottomsheet_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filterr_options"
+        app:layout_constraintTop_toTopOf="@id/filterr_options"
+        app:layout_constraintBottom_toBottomOf="@id/filterr_options"
+        />
+
+    <TextView
+        android:id="@+id/filterr_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_options"
+        android:fontFamily="@font/markpro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/done_btn"
+        android:layout_marginTop="30dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/done_btn"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/markpro"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/filterr_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/filterr_options"
+        app:layout_constraintBottom_toBottomOf="@id/filterr_options"
+        android:background="@drawable/done_btn_background"
+        />
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brand"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:fontFamily="@font/markpro"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        android:layout_marginTop="30dp"
+        />
+
+    <Spinner
+        android:id="@+id/brand_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/brand"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="@id/done_btn"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:fontFamily="@font/markpro"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/brand_spinner"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        android:layout_marginTop="30dp"
+        />
+
+    <Spinner
+        android:id="@+id/price_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="@id/done_btn"
+        />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/size"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:fontFamily="@font/markpro"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/price_spinner"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        android:layout_marginTop="30dp"
+        />
+
+    <Spinner
+        android:id="@+id/size_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/size"
+        app:layout_constraintStart_toStartOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="@id/done_btn"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

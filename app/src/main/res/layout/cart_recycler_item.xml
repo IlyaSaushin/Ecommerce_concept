@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/textColor"
+    android:layout_marginVertical="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/prod_image_layout"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:background="@color/textColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/prod_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/samsung"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/prod_name"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/galaxy_note_20_ultraa"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/markpro"
+        app:layout_constraintTop_toTopOf="@id/prod_image_layout"
+        app:layout_constraintStart_toEndOf="@id/prod_image_layout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/prod_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_3000_00"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/markpro"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/prod_name"
+        app:layout_constraintStart_toStartOf="@id/prod_name"
+        android:layout_marginTop="8dp"
+        />
+
+        <ImageView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/counter"
+            app:layout_constraintTop_toTopOf="@id/prod_image_layout"
+            app:layout_constraintBottom_toBottomOf="@id/prod_image_layout"
+            app:layout_constraintStart_toEndOf="@id/prod_name"
+            android:layout_marginStart="30dp"
+            />
+
+    <ImageView
+        android:id="@+id/remove_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_basket"
+        app:layout_constraintTop_toTopOf="@id/counter"
+        app:layout_constraintBottom_toBottomOf="@id/counter"
+        app:layout_constraintStart_toEndOf="@id/counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginVertical="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/phone_image"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:src="@drawable/samsung"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/current_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_047"
+            android:fontFamily="@font/mark_pro_bold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            app:layout_constraintTop_toBottomOf="@id/phone_image"
+            app:layout_constraintStart_toStartOf="@id/phone_image"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_500"
+            android:fontFamily="@font/markpro"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="@color/striked_text"
+            app:layout_constraintBottom_toBottomOf="@id/current_price"
+            app:layout_constraintStart_toEndOf="@id/current_price"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/phone_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/samsung_galaxy_s20_ultra"
+            android:fontFamily="@font/markpro"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            app:layout_constraintTop_toBottomOf="@id/current_price"
+            app:layout_constraintStart_toStartOf="@id/current_price"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/fav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:src="@drawable/isfavoruteprod"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/not_fav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:elevation="5dp"
+            android:src="@drawable/not_fav_prod"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
