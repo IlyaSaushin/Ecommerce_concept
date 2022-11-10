@@ -17,7 +17,6 @@ import com.earl.effective_mobile.presentation.screens.productDetails.main.recycl
 import com.google.android.material.tabs.TabLayoutMediator
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
 
     private val viewModel by viewModel<ProductDetailsViewModel>()
@@ -55,34 +54,16 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
     private fun imagesRecycler() {
 
         val adapter = ProductDetailsImagesRecyclerAdapter()
-//        val layoutManager = ImagesRecyclerLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         val layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-
 
         binding.productDetailsImagesRecycler.addItemDecoration(CenterDecoration(0))
         snapHelper.attachToRecyclerView(binding.productDetailsImagesRecycler)
 
         binding.productDetailsImagesRecycler.adapter = adapter
-//        binding.productDetailsImagesRecycler.layoutManager = layoutManager
         binding.productDetailsImagesRecycler.layoutManager = layoutManager
         viewModel.observeProductDetailsImagesLD(this) {
             adapter.submitList(it)
         }
-/*
-        val snapHelper = LinearSnapHelper()
-        snapHelper.attachToRecyclerView(binding.productDetailsImagesRecycler)
-
-        binding.productDetailsImagesRecycler.onFlingListener = snapHelper*/
-
-        /*binding.productDetailsImagesRecycler.addOnItemTouchListener(
-            RecyclerItemClickListener(context, binding.productDetailsImagesRecycler, object : OnItemClickListener() {
-                fun onItemClick(view: View?, position: Int) {
-                    recyclerViewObject.smoothScrollToPosition(position)
-                }
-
-                fun onLongItemClick(view: View?, position: Int) {}
-            })
-        )*/
 
         binding.productDetailsImagesRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -126,20 +107,6 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
                     child.scaleY = scale
                     child.elevation = 40f
                 }
-
-                /*val mid = manager.width / 2.0f
-                val d1 = 0.9f * mid
-                for (i in 0 until manager.childCount) {
-                    val child = manager.getChildAt(i)
-                    val childMid = (manager.getDecoratedRight(child!!) + manager.getDecoratedLeft(child)) / 0.2f
-                    val d = Math.min(d1, Math.abs(mid - childMid))
-                    val scale = 1f - 0.15f * d / d1
-                    child.scaleX = scale
-                    child.scaleY = scale
-                }*/
-
-                // "i" is your middle index and implement selecting it as you want
-                // optionsAdapter.selectItemAtIndex(i)
                 return
             }
         }
@@ -168,40 +135,3 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
         fun newInstance() = ProductDetailsFragment()
     }
 }
-
-/*
-class MainActivity : AppCompatActivity() {
-
-    private val snapHelper = CenterSnapHelper()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        recyclerView.addItemDecoration(CenterDecoration(0))
-        snapHelper.attachToRecyclerView(recyclerView)
-        recyclerView.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-                val holder = object : RecyclerView.ViewHolder(
-                    LayoutInflater.from(this@MainActivity).inflate(
-                        R.layout.list_item,
-                        parent,
-                        false
-                    )
-                ) {}
-                holder.itemView.setOnClickListener {
-                    if (holder.adapterPosition != RecyclerView.NO_POSITION) {
-                        snapHelper.scrollTo(holder.adapterPosition, true)
-                    }
-                }
-                return holder
-            }
-
-            override fun getItemCount(): Int = 20
-
-            override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-                holder.itemView.textView.text = "pos:$position"
-            }
-        }
-
-    }
-}*/
