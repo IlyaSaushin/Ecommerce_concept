@@ -1,2 +1,5 @@
 # Ecommerce_concept
-https://youtube.com/shorts/T2acG42GExc?feature=share
+
+Test project for Effective Mobile company
+
+<img src="https://media.giphy.com/media/U0YFtffex8KA0o8JiO/giphy.gif" alt="я джифка"> 
